@@ -1,5 +1,6 @@
 # 4 UP GAME
- Computer Organization and Assembly Language Lab Project done in our 3rd Semester at FAST NUCES KHI
+ Computer Organization and Assembly Language Lab Project done in our 3rd Semester at FAST NUCES KHI  
+ 
  **Instructor: Mubashir**
 
  **Members**: Shaheer Uddin Ahmed(23K-0649),Faizan Jawed(23K-0688),Yahya Shaikh(23K-0718).  
