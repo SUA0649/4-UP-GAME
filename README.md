@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/a437856a-ed99-4e79-a03b-db2c27cd31c5)# 4 UP GAME
+# 4 UP GAME
  Computer Organization and Assembly Language Lab Project done in our 3rd Semester at FAST NUCES KHI
  **Instructor: Mubashir**
 
