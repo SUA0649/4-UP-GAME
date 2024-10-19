@@ -15,8 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="Game.asm">
+    <MASM Include="main.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="main_menu.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="board.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="main_game_file.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shared.inc">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

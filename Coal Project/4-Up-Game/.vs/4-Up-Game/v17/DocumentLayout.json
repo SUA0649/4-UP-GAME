@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Project\\COAL LAB Project\\4 UP GAME\\4-UP-GAME\\Coal Project\\4-Up-Game\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8BF1B3EF-8BCE-479B-BB90-4FA251AE36AB}|Coal Project\\Coal Project.vcxproj|F:\\Project\\COAL LAB Project\\4 UP GAME\\4-UP-GAME\\Coal Project\\4-Up-Game\\Coal Project\\board.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8BF1B3EF-8BCE-479B-BB90-4FA251AE36AB}|Coal Project\\Coal Project.vcxproj|solutionrelative:Coal Project\\board.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BF1B3EF-8BCE-479B-BB90-4FA251AE36AB}|Coal Project\\Coal Project.vcxproj|F:\\Project\\COAL LAB Project\\4 UP GAME\\4-UP-GAME\\Coal Project\\4-Up-Game\\Coal Project\\shared.inc||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{8BF1B3EF-8BCE-479B-BB90-4FA251AE36AB}|Coal Project\\Coal Project.vcxproj|solutionrelative:Coal Project\\shared.inc||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BF1B3EF-8BCE-479B-BB90-4FA251AE36AB}|Coal Project\\Coal Project.vcxproj|F:\\Project\\COAL LAB Project\\4 UP GAME\\4-UP-GAME\\Coal Project\\4-Up-Game\\Coal Project\\main.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8BF1B3EF-8BCE-479B-BB90-4FA251AE36AB}|Coal Project\\Coal Project.vcxproj|solutionrelative:Coal Project\\main.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BF1B3EF-8BCE-479B-BB90-4FA251AE36AB}|Coal Project\\Coal Project.vcxproj|F:\\Project\\COAL LAB Project\\4 UP GAME\\4-UP-GAME\\Coal Project\\4-Up-Game\\Coal Project\\main_game_file.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8BF1B3EF-8BCE-479B-BB90-4FA251AE36AB}|Coal Project\\Coal Project.vcxproj|solutionrelative:Coal Project\\main_game_file.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BF1B3EF-8BCE-479B-BB90-4FA251AE36AB}|Coal Project\\Coal Project.vcxproj|F:\\Project\\COAL LAB Project\\4 UP GAME\\4-UP-GAME\\Coal Project\\4-Up-Game\\Coal Project\\main_menu.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8BF1B3EF-8BCE-479B-BB90-4FA251AE36AB}|Coal Project\\Coal Project.vcxproj|solutionrelative:Coal Project\\main_menu.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "main_game_file.asm",
+              "DocumentMoniker": "F:\\Project\\COAL LAB Project\\4 UP GAME\\4-UP-GAME\\Coal Project\\4-Up-Game\\Coal Project\\main_game_file.asm",
+              "RelativeDocumentMoniker": "Coal Project\\main_game_file.asm",
+              "ToolTip": "F:\\Project\\COAL LAB Project\\4 UP GAME\\4-UP-GAME\\Coal Project\\4-Up-Game\\Coal Project\\main_game_file.asm",
+              "RelativeToolTip": "Coal Project\\main_game_file.asm",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-19T13:13:09.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "shared.inc",
+              "DocumentMoniker": "F:\\Project\\COAL LAB Project\\4 UP GAME\\4-UP-GAME\\Coal Project\\4-Up-Game\\Coal Project\\shared.inc",
+              "RelativeDocumentMoniker": "Coal Project\\shared.inc",
+              "ToolTip": "F:\\Project\\COAL LAB Project\\4 UP GAME\\4-UP-GAME\\Coal Project\\4-Up-Game\\Coal Project\\shared.inc",
+              "RelativeToolTip": "Coal Project\\shared.inc",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAPAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJdSURBVDhPXVPdS1NhGP\u002BlZ5DJ5ubmdJNgQjG98yKS1ilaSqVh9C8EFWn/QCk0vAi6q6gubMnW2lZQoDZwEdkuiu7SeTMI\u002B9i8yi2dVLCds53z9r7v\u002BfDYD348z/uc5/N9z7MPOlKpFFEJAVFVECpVlepEhWFjUmht3ZFkOTw5MZHnQczRwLNkkiiKYrLJ2NxlOp0mhUKBPI5Gqw8ePhrUw9CiS16FQaFSURgVTpqIk8Hj8eB4KOQUBCHHDRS7CYxuqKBNa7oJ7ZxIJJDNZiHJkpMbrIjF4rx1OqNGSSZ1kxKp1yVSo2w0muTuvftmBUsH9PJ0nSkN2rYsN8yz\u002BY1Cpb4GzARf1tcxOxfDUvYNiqUSZqNPsJjJ0C/WgTSNPheXDGYCQbAhfHoEXv9BfC1uYPT8OCRJspRmz6prltcTZm7fmXe73c5mU2u3Xq9xydB36DDm4k9B7wCTV6/oVjqC/mIMLdXtrUBIFE\u002BdOTeG1ZXPUKUaeru7sPR6AT6fHyfDw9rPpQdonVhGKJWK4cziQpEderweiKKIYDCIkeEwfnz/ho1SERcvjHNnNgML/f8SBx2ODv6um5tl7sRYLlewv60NTlcn8mtrvKpRd88lhsQTubOjYzxBt78Xyecv8HZ5GZXqDh/B5XLhZ/kXdzbA9sKA8Onjh0uUgb5AIHL52nUeZCD3/h183i502Nt1iwb2zxgQ5l\u002B9jDPl5vR0hMn86gr\u002B/vmNI0eHMNDfD/HYEDPvAdtUA\u002BY635iaIm5vD7YrZTgcdmzREWw2G\u002BztB/jMfK3ZevM1J5iJ3KKxwD8moGQZtdENzgAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-10-19T13:12:35.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "board.asm",
+              "DocumentMoniker": "F:\\Project\\COAL LAB Project\\4 UP GAME\\4-UP-GAME\\Coal Project\\4-Up-Game\\Coal Project\\board.asm",
+              "RelativeDocumentMoniker": "Coal Project\\board.asm",
+              "ToolTip": "F:\\Project\\COAL LAB Project\\4 UP GAME\\4-UP-GAME\\Coal Project\\4-Up-Game\\Coal Project\\board.asm",
+              "RelativeToolTip": "Coal Project\\board.asm",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-19T13:12:16.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "main_menu.asm",
+              "DocumentMoniker": "F:\\Project\\COAL LAB Project\\4 UP GAME\\4-UP-GAME\\Coal Project\\4-Up-Game\\Coal Project\\main_menu.asm",
+              "RelativeDocumentMoniker": "Coal Project\\main_menu.asm",
+              "ToolTip": "F:\\Project\\COAL LAB Project\\4 UP GAME\\4-UP-GAME\\Coal Project\\4-Up-Game\\Coal Project\\main_menu.asm",
+              "RelativeToolTip": "Coal Project\\main_menu.asm",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAkwFAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-19T13:09:32.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.asm",
+              "DocumentMoniker": "F:\\Project\\COAL LAB Project\\4 UP GAME\\4-UP-GAME\\Coal Project\\4-Up-Game\\Coal Project\\main.asm",
+              "RelativeDocumentMoniker": "Coal Project\\main.asm",
+              "ToolTip": "F:\\Project\\COAL LAB Project\\4 UP GAME\\4-UP-GAME\\Coal Project\\4-Up-Game\\Coal Project\\main.asm",
+              "RelativeToolTip": "Coal Project\\main.asm",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-19T12:51:21.655Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
