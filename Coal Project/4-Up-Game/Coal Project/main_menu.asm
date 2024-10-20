@@ -22,7 +22,7 @@ Include shared.inc
 
 
 	Current_Option BYTE 0
-
+	LengthLine DWORD 59
 
 	Line_1 BYTE "  _  _          _    _          _____                      ",0
 	Line_2 BYTE " | || |        | |  | |        / ____|                     ",0
@@ -53,6 +53,12 @@ Include shared.inc
 
 	Buffer_How_To_Play DWORD OFFSET How_To_Play_Line_1,OFFSET How_To_Play_Line_2,OFFSET How_To_Play_Line_3,OFFSET How_To_Play_Line_4,OFFSET How_To_Play_Line_5,OFFSET How_To_Play_Line_6,OFFSET How_To_Play_Line_7,OFFSET How_To_Play_Line_8
 
+	How_Line_1 BYTE " 1. //Jou game ky inputs ky logic le rha wo btady ky kese lena",0
+	How_Line_2 BYTE " 2. Players take turns placing checkers into the grid until one player has a row of 4 of his or her checkers in a row.",0
+	How_Line_3 BYTE " 3. The row can be up and down (vertical), across (horizontal), or diagonal.",0
+	How_Line_4 BYTE " 4. The first player to make a row wins.",0
+	
+	
 	How_To_Play_Statement BYTE "You should play like this and that",0
 
 .code
@@ -66,9 +72,14 @@ mov ebx,0
 mov eax,0
 
 
+;Printing the loading animation here
+call loading_animation
+
+
 ;Printing Main Menu here
 
 Main_Menu: 
+
 
 	call Clrscr
 
@@ -78,6 +89,10 @@ Main_Menu:
 	mov Line_X,10
 	mov Line_Y,5
 
+	mov eax, 13 ; Setting color to Magenta for title
+	call SetTextColor
+
+	mov eax,0	
 	Display:	
 		
 		;We have to Call the Gotoxy instruciion everytime since the cursor resets whenever we want to print anything again, remember to change y-axis too
@@ -92,6 +107,11 @@ Main_Menu:
 		call WriteString
 		call Crlf
 		loop Display
+
+	
+	mov eax, 15 ;Setting color to White for the lower part
+	call SetTextColor
+	mov eax,0
 
 	add Line_X, 30
 	add Line_Y, 2
@@ -134,8 +154,11 @@ Main_Menu:
 		call Gotoxy
 		mov edx,OFFSET Arrow
 		call WriteString
+		
 
 		call ReadChar
+
+
 
 		;Comparing for 	options
 
@@ -169,14 +192,20 @@ Main_Menu:
 		
 		cmp Current_Option,2 ;If 2 we close, if 1 we print how to play , if 0 we start the game
 		je last
-		cmp Current_Option,0
-		call board
-		ret
+
+
+		cmp Current_Option,0 ;Instead of calling the whole function from here, we jump to a label which calls the function instead
+		je _board
 		cmp Current_Option,1
 		je How_To_Play
+		cmp Current_Option,2
+		ret
 
 	How_To_Play:
-			
+
+		mov eax, 9 ; Setting the color of How to play title to blue
+		call SetTextColor
+
 		mov Line_X,10
 		mov Line_Y,5
 
@@ -197,23 +226,117 @@ Main_Menu:
 			call WriteString
 			call Crlf
 			loop Display_How
+
+		;Setting the color back to white
 		
-		add Line_X, 5
+		mov eax,15
+		call SetTextColor
+
+		;Displaying all the how to play line
+
+		inc Line_Y
+		add Line_X, 6
 		mov dl, Line_X
 		mov dh, Line_Y
-
 		call Gotoxy
 
-		mov edx,OFFSET How_To_Play_Statement
+
+		mov edx,OFFSET How_Line_1
 		call WriteString
+		
+		inc Line_Y
+		mov dl, Line_X
+		mov dh, Line_Y
+		call Gotoxy
+
+		mov edx,OFFSET How_Line_2
+		call WriteString
+		
+		inc Line_Y
+		mov dl, Line_X
+		mov dh, Line_Y
+		call Gotoxy
+
+		mov edx,OFFSET How_Line_3
+		call WriteString
+		
+		inc Line_Y
+		mov dl, Line_X
+		mov dh, Line_Y
+		call Gotoxy
+
+		mov edx,OFFSET How_Line_4
+		call WriteString
+
 
 		call ReadChar	
 		jmp Main_Menu
 
+
+_board:
+	call board
+	ret
 
 
 Last: ;For some reason i couldn't name my label to End
 
 exit
 main_menu_p ENDP
+
+
+;Loading Animation
+loading_animation PROC
+
+
+;setting the color to magenta 
+mov eax, (13+(0))
+call SetTextColor
+
+mov ebx, 28
+mov Line_Y, 12
+
+mov ecx,8
+
+
+;Going to the last index of the last buffer and moving backwards
+	_loop_1:
+		mov Line_X,69
+		
+		pushd ecx
+
+		mov ecx,LengthLine
+
+		_loop_2:
+			
+			mov edx,0
+			mov dh, Line_Y
+			mov dl,Line_X
+			call Gotoxy
+			
+			;Since [edx] will be a character, use a pointer to tell the assembler that it is a BYTE memory and using movzx to give to eax register
+
+			mov edx,Buffer_menu[ebx]
+			movzx eax, BYTE PTR [edx+ecx-1]	
+			
+			
+			call WriteChar
+			
+			;For Delaying each character
+
+			mov eax, 5
+			call Delay
+			
+			
+			dec Line_X
+			loop _loop_2
+
+		dec Line_Y
+		sub ebx,4
+		pop ecx
+		loop _loop_1
+
+				
+ret
+loading_animation ENDP
+
 END
