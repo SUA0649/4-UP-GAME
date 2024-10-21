@@ -1,8 +1,8 @@
 Include C:/irvine/Irvine32.inc
 Include shared.inc
 
-.data
 
+.data
 ;General
 
 	;Using cordiantes for the Instruction (Gotoxy DH = row, DL = col)
@@ -335,7 +335,6 @@ mov ecx,8
 		pop ecx
 		loop _loop_1
 
-				
 ret
 loading_animation ENDP
 
