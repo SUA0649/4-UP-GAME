@@ -13,10 +13,4 @@ main_game PROC uses eax ebx ecx edx esi edi
     
 ret
 main_game ENDP
-
-EXTERN game_board: BYTE           ; Declare the game_board as external
-
-.data
-prompt BYTE "Enter column number: ", 0
-
 END
