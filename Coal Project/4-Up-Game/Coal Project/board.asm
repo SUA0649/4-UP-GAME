@@ -1,16 +1,40 @@
 INCLUDE Irvine32.inc
 INCLUDE shared.inc
 
-EXITPROCESS PROTO
+.data
+
+
+rows = 6                   
+cols = 7                   
+     
+emptyBox BYTE "|___|", 0
+Player1Box BYTE "|_0_|", 0
+Player2Box BYTE "|_X_|", 0
+
+
+;Don't use numeric numbers else sir hmary sath viva mein kuch change krny ko bola to mary jaengy
+
+PUBLIC Board_Layout
+Board_Layout BYTE rows DUP(cols DUP(0))
+
+
+;0 meaning empty, 1 meaning player_1, 2 meaning player_2
+
+fullColumnMsg BYTE "Column is full! Try again.", 0
+newLine BYTE "-----------------------------------", 0
+
+UpArrow BYTE '^','|'
+
+PUBLIC Current_Iteration
+Current_Iteration DWORD ?
+
 
 .code
-
-
 
 board PROC
     call clrscr
     call main_game           ; Call the game logic
-    exit
+ret  
 board ENDP
 
 DisplayArrow PROC index:BYTE
@@ -87,7 +111,6 @@ DisplayArrow PROC index:BYTE
     
 
     ret
-
 DisplayArrow ENDP
 
 
@@ -123,8 +146,8 @@ Found_empty:
        mov Board_Layout[ebx],1    
        inc Current_Iteration
       
-
 _end:
+movzx ebx, Column
 
 ret
 Input ENDP
@@ -157,7 +180,7 @@ GameLoop PROC uses ecx edx eax ebx esi
     ;No need to check for invalid Input, i mean we only have to if it is filled to the brim but otherwise nope
         
         
-           Print_Arrow:
+         Print_Arrow:
                 INVOKE DisplayArrow, arrow_index
         
         Input_Loop:
@@ -188,8 +211,10 @@ GameLoop PROC uses ecx edx eax ebx esi
 
             Take_Input:
                 movzx eax,arrow_index
-                call writeDec
-                   INVOKE Input, arrow_index
+                INVOKE Input, arrow_index
+               
+             ;Ebx will have the column in which latest input was taken in and from there we check(up,down,left,right and diagonals)
+             INVOKE Checker, ebx
 
             jmp GameLoopStart
     
@@ -262,40 +287,5 @@ NextColumn:
 pop ebp
 ret 12;Emptying 8 bytes from stack
 DisplayBoard ENDP
-
-
-
-.data
-PUBLIC game_board           ; Make game_board public
-game_board BYTE 6 DUP(7 DUP('-'))  ; 6x7 board initialized with '-'
-
-
-
-
-
-rows = 6                   
-cols = 7                   
-     
-emptyBox BYTE "|___|", 0
-Player1Box BYTE "|_0_|", 0
-Player2Box BYTE "|_X_|", 0
-
-
-;Don't use numeric numbers else sir hmary sath viva mein kuch change krny ko bola to mary jaengy
-
-PUBLIC Board_Layout
-Board_Layout BYTE rows DUP(cols DUP(0))
-
-
-;0 meaning empty, 1 meaning player_1, 2 meaning player_2
-
-fullColumnMsg BYTE "Column is full! Try again.", 0
-newLine BYTE "-----------------------------------", 0
-
-UpArrow BYTE '^','|'
-
-
-Current_Iteration DWORD ?
-
 
 END 
