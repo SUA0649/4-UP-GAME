@@ -1,20 +1,28 @@
 # 4 UP GAME
  Computer Organization and Assembly Language Lab Project done in our 3rd Semester at FAST NUCES KHI  
- 
  **Instructor: Mubashir**
 
  **Members**: Shaheer Uddin Ahmed(23K-0649),Faizan Jawed(23K-0688),Yahya Shaikh(23K-0718).  
+ https://youtu.be/w4Sk5TYWdi4?si=z31NGLrWPZ8H3D-o
+
+# Main Game:
+ <a href="https://youtu.be/w4Sk5TYWdi4?si=z31NGLrWPZ8H3D-o" target="_blank">
+        <img src="http://img.youtube.com/vi/w4Sk5TYWdi4/maxresdefault.jpg" alt="Watch the video" width="900" height="500" border="10" />
+    </a>
+</a>
+_______________________________________
 ## Introduction:
 Four-Up game is basically a strategy board game consisting of two-players where each player takes turn dropping coins into the vertical grid. First to get 4 coins in a row, either vertically, horizontally or diagonally is declared the winner.
 
 This project aims to implement a simplified version of the Four-Up game in a digital layout using Assembly Language, our main goal is to understand the basics of low-level programming and get a deeper connection to memory management.
 ________________________________________
-## Existing System:
-(Done On C++):
- ![image](https://github.com/user-attachments/assets/11b7588d-d41f-413a-99df-046fbb00fa8a)
+## How To Configure:
+<a href="https://youtu.be/ZL6BTrsAc_s?si=ND1r3TwFB29mdMCU" target="_blank">
+        <img src="http://img.youtube.com/vi/ZL6BTrsAc_s/maxresdefault.jpg" alt="Watch the video" width="900" height="500" border="10" />
+</a>
+ ______________________________________________
 
-
-
+ ## Existing System:
 There have been various versions of this game written in numerous high-level programming languages, such as C++, Python, or Java. They mainly use and take advantage of pre-defined complex libraries along with the usage of built-in GUIs (Graphical User Interfaces) such as SFML and Unity which greatly simplifies the process. The existing systems do not give the user or developer insight into memory handling, registers, and CPU-level execution, which could be valuable for educational purposes.
 ________________________________________
 ## Proposed Solution:
