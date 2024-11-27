@@ -93,13 +93,15 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Irvine\Irvine;C:\windows_a\Include</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\irvine;C:\windows_a\Include</AdditionalLibraryDirectories>
       <AdditionalDependencies>Irvine32.lib;kernel32.lib;user32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <StackReserveSize>1073741824</StackReserveSize>
-      <StackCommitSize>65536</StackCommitSize>
+      <StackReserveSize>
+      </StackReserveSize>
+      <StackCommitSize>
+      </StackCommitSize>
     </Link>
     <MASM>
-      <IncludePaths>C:/irvine/irvine</IncludePaths>
+      <IncludePaths>C:\irvine</IncludePaths>
     </MASM>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -116,13 +118,15 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Irvine\Irvine;C:\windows_a\Include</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\irvine;C:\windows_a\Include</AdditionalLibraryDirectories>
       <AdditionalDependencies>Irvine32.lib;kernel32.lib;user32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <StackReserveSize>1073741824</StackReserveSize>
-      <StackCommitSize>65536</StackCommitSize>
+      <StackReserveSize>
+      </StackReserveSize>
+      <StackCommitSize>
+      </StackCommitSize>
     </Link>
     <MASM>
-      <IncludePaths>C:/irvine/irvine</IncludePaths>
+      <IncludePaths>C:\irvine</IncludePaths>
     </MASM>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -136,12 +140,14 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>Irvine32.lib;kernel32.lib;user32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Irvine\Irvine;C:\windows_a\Include</AdditionalLibraryDirectories>
-      <StackReserveSize>1073741824</StackReserveSize>
-      <StackCommitSize>65536</StackCommitSize>
+      <AdditionalLibraryDirectories>C:\irvine;C:\windows_a\Include</AdditionalLibraryDirectories>
+      <StackReserveSize>
+      </StackReserveSize>
+      <StackCommitSize>
+      </StackCommitSize>
     </Link>
     <MASM>
-      <IncludePaths>C:/irvine/irvine</IncludePaths>
+      <IncludePaths>C:\irvine</IncludePaths>
     </MASM>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -159,12 +165,14 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>Irvine32.lib;kernel32.lib;user32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Irvine\Irvine;C:\windows_a\Include</AdditionalLibraryDirectories>
-      <StackReserveSize>1073741824</StackReserveSize>
-      <StackCommitSize>65536</StackCommitSize>
+      <AdditionalLibraryDirectories>C:\irvine;C:\windows_a\Include</AdditionalLibraryDirectories>
+      <StackReserveSize>
+      </StackReserveSize>
+      <StackCommitSize>
+      </StackCommitSize>
     </Link>
     <MASM>
-      <IncludePaths>C:/irvine/irvine</IncludePaths>
+      <IncludePaths>C:\irvine</IncludePaths>
     </MASM>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -185,7 +193,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Media Include="beat.wav" />
+    <Media Include="lofis.wav" />
     <Media Include="sound.wav" />
+    <Media Include="victory.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

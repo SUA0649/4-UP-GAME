@@ -40,5 +40,14 @@
     <Media Include="sound.wav">
       <Filter>Source Files</Filter>
     </Media>
+    <Media Include="lofis.wav">
+      <Filter>Source Files</Filter>
+    </Media>
+    <Media Include="victory.wav">
+      <Filter>Source Files</Filter>
+    </Media>
+    <Media Include="beat.wav">
+      <Filter>Source Files</Filter>
+    </Media>
   </ItemGroup>
 </Project>

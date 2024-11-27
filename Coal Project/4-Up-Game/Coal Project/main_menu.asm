@@ -1,8 +1,10 @@
 Include Irvine32.inc
 Include shared.inc
 
-
+PlaySoundA PROTO, pszSound:PTR BYTE, hmod:DWORD, fdwSound:DWORD
 .data
+music BYTE "beat.wav",0
+wav_file BYTE "sound.wav",0
 ;General
 
 	;Using cordiantes for the Instruction (Gotoxy DH = row, DL = col)
@@ -73,6 +75,7 @@ mov eax,0
 
 
 ;Printing the loading animation here
+INVOKE PlaySoundA, ADDR wav_file, NULL, 00020001h 
 call loading_animation
 
 
@@ -275,6 +278,7 @@ Main_Menu:
 
 
 _board:
+INVOKE PlaySoundA,ADDR music,NULL,0020001h
 	call board
 	mov eax,-1
 	ret

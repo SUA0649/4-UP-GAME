@@ -1,8 +1,9 @@
 INCLUDE Irvine32.inc
 INCLUDE shared.inc
 
+PlaySoundA PROTO, pszSound:PTR BYTE, hmod:DWORD, fdwSound:DWORD
 .data
-
+wiv_file BYTE "victory.wav",0
 line_1 BYTE "__________.__                                         ____            .__               ",0
 line_2 BYTE "\______   \  | _____  ___.__. ___________            /_   |   __  _  _|__| ____   ______",0
 line_3 BYTE " |     ___/  | \__  \<   |  |/ __ \_  __ \   ______   |   |   \ \/ \/ /  |/    \ /  ___/",0
@@ -75,8 +76,11 @@ mov eax,15
 call SetTextColor
 
 _End:
-	
+	INVOKE PlaySoundA, NULL, NULL, 0
+	INVOKE PlaySoundA, ADDR wiv_file, NULL, 00020001h 
+
 call ReadDec
+INVOKE PlaySoundA,NULL,NULL,0
 mov eax,-1
 ret
 Winner ENDP
