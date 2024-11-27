@@ -55,10 +55,10 @@ wav_file BYTE "sound.wav",0
 
 	Buffer_How_To_Play DWORD OFFSET How_To_Play_Line_1,OFFSET How_To_Play_Line_2,OFFSET How_To_Play_Line_3,OFFSET How_To_Play_Line_4,OFFSET How_To_Play_Line_5,OFFSET How_To_Play_Line_6,OFFSET How_To_Play_Line_7,OFFSET How_To_Play_Line_8
 
-	How_Line_1 BYTE " 1. //Jou game ky inputs ky logic le rha wo btady ky kese lena",0
+	How_Line_1 BYTE " 1. You can use arrow keys left,right to select the column where you want to place the disk at.",0
 	How_Line_2 BYTE " 2. Players take turns placing checkers into the grid until one player has a row of 4 of his or her checkers in a row.",0
 	How_Line_3 BYTE " 3. The row can be up and down (vertical), across (horizontal), or diagonal.",0
-	How_Line_4 BYTE " 4. The first player to make a row wins.",0
+	How_Line_4 BYTE "  4. The first player to make a row wins.",0
 	
 	
 	How_To_Play_Statement BYTE "You should play like this and that",0

@@ -12,7 +12,6 @@ Player1Box BYTE "|_0_|", 0
 Player2Box BYTE "|_X_|", 0
 
 
-;Don't use numeric numbers else sir hmary sath viva mein kuch change krny ko bola to mary jaengy
 
 PUBLIC Board_Layout
 Board_Layout BYTE rows DUP(cols DUP(0))
@@ -39,7 +38,7 @@ board ENDP
 
 DisplayArrow PROC index:BYTE
 
-     ;Gotoxy (DH = row, DL = col) ;This is somewhat confusing, just think of it as DH = how much down from top, and columns = how much right from left
+     ;Gotoxy (DH = row, DL = col) ; As DH = how much down from top, and columns = how much right from left
 
     
     mov dh,cols + 5
@@ -155,8 +154,7 @@ Input ENDP
 
 
 
-;Starting from here is the main Game logic using Yahya's code
-
+;Starting the Game Loop for the checking of board 
 GameLoop PROC uses ecx edx eax ebx esi
    
    Local arrow_index:BYTE
@@ -176,8 +174,7 @@ GameLoop PROC uses ecx edx eax ebx esi
     call DisplayBoard
   
     
-    ;Showing the arrow as asked many times by Shaheer .-. , btw i will not be clearing the whole screen i will just move cursor left and right and fill with white spaces
-    ;No need to check for invalid Input, i mean we only have to if it is filled to the brim but otherwise nope
+    ;No need to check for invalid Input, i mean we only have to if it is filled to the brim 
         
         
          Print_Arrow:

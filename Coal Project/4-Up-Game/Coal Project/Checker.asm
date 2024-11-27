@@ -1,7 +1,7 @@
 INCLUDE Irvine32.inc
 INCLUDE shared.inc
 
-PlaySoundA PROTO, pszSound:PTR BYTE, hmod:DWORD, fdwSound:DWORD
+PlaySoundA PROTO, pszSound:PTR BYTE, hmod:DWORD, fdwSound:DWORD ; For winning of Player 1
 .data
 wiv_file BYTE "victory.wav",0
 line_1 BYTE "__________.__                                         ____            .__               ",0
@@ -11,7 +11,7 @@ line_4 BYTE " |    |   |  |__/ __ \\___  \  ___/|  | \/  /_____/   |   |    \   
 line_5 BYTE " |____|   |____(____  / ____|\___  >__|               |___|     \/\_/ |__|___|  /____  >",0
 line_6 BYTE "                   \/\/         \/                                           \/     \/  ",0
 
-Buffer_1 DWORD OFFSET Line_1,OFFSET Line_2,OFFSET Line_3,OFFSET Line_4,OFFSET Line_5,OFFSET Line_6
+Buffer_1 DWORD OFFSET Line_1,OFFSET Line_2,OFFSET Line_3,OFFSET Line_4,OFFSET Line_5,OFFSET Line_6 ; For winning of Player 2
 
 line_7 BYTE "__________.__                                        ________             .__               ",0
 line_8 BYTE "\______   \  | _____  ___.__. ___________            \_____  \    __  _  _|__| ____   ______",0
@@ -88,7 +88,7 @@ Winner ENDP
 
 
 
-Check_Diagonal PROC uses ebx, COLUMN:DWORD, ROW:DWORD, INDEX:DWORD
+Check_Diagonal PROC uses ebx, COLUMN:DWORD, ROW:DWORD, INDEX:DWORD ;Checking logic for diagonal
    
    cmp Current_Iteration, 10
    jb _End
@@ -210,7 +210,7 @@ _End:
 ret
 Check_Diagonal ENDP
 
-Check_Vertical PROC ROW:DWORD, INDEX:DWORD
+Check_Vertical PROC ROW:DWORD, INDEX:DWORD ;Checking Logic for Vertical
 
 mov edi,ROW
     
@@ -235,7 +235,7 @@ ret
 Check_Vertical ENDP
 
 
-Check_Horizontal PROC COLUMN:DWORD, INDEX:DWORD
+Check_Horizontal PROC COLUMN:DWORD, INDEX:DWORD ;Checking Logic for Horizontal
 
 
 mov edx,1 ; Counter for checking number
