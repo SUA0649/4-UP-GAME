@@ -215,8 +215,10 @@ GameLoop PROC uses ecx edx eax ebx esi
                
              ;Ebx will have the column in which latest input was taken in and from there we check(up,down,left,right and diagonals)
              INVOKE Checker, ebx
+
              cmp eax,-1
              je GameLoopEnd
+
             jmp GameLoopStart
     
     GameLoopEnd:
@@ -261,31 +263,33 @@ ColLoop:
     jz Player2Cell            
 
 EmptyCell:
+    
     mov edx, [ebp+16]
-    mov eax,7
-    call setTextColor
     call WriteString
     jmp NextColumn
 
 Player1Cell:
+    mov eax, 4
+    call SetTextColor
     mov edx, [ebp+12]
-    mov eax,4
-    call setTextColor
     call WriteString
     jmp NextColumn
 
 Player2Cell:
+    mov eax, 1
+    call SetTextColor
+
     mov edx, [ebp+8]
-    mov eax,1
-    call setTextColor
     call WriteString
     jmp NextColumn
 
 NextColumn:
+
+    mov eax,15
+    call SetTextColor
+
     inc edi
     loop ColLoop
-
-
     call Crlf                
     pop ecx
     add esi,cols
