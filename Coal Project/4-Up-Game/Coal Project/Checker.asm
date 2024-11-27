@@ -85,13 +85,125 @@ Winner ENDP
 
 
 Check_Diagonal PROC uses ebx, COLUMN:DWORD, ROW:DWORD, INDEX:DWORD
-    mov edx,1 ; counter
-	mov edi,ROW
-	cmp Current_Iteration,10
-	jl _End
+   
+   cmp Current_Iteration, 10
+   jb _End
 
-    _End:
-        ret
+   mov edx,1
+   mov edi, COLUMN
+   mov esi, ROW
+   mov ebx, INDEX
+
+   mov ecx,3
+
+   Upper_Right:
+	inc edi
+	cmp edi,cols
+	jae Upper_Right_End
+	dec esi
+	cmp esi,0
+	jb Upper_Right_End
+	
+	;Going to Upper-Right index of the board (index)
+
+	add ebx, 1 - cols
+
+	cmp Board_Layout[ebx], al
+	jne Upper_Right_End
+	inc edx
+
+   loop Upper_Right
+
+   Upper_Right_End:
+
+
+   mov edi, COLUMN
+   mov esi, ROW
+   mov ebx, INDEX
+
+   mov ecx,3
+
+
+   Lower_Left:
+   dec edi
+   cmp edi,0
+   jb Lower_Left_End
+   inc esi
+   cmp esi,rows
+   jae Lower_Left_End
+
+   ;Going to Lower-Left index of the board (index)
+	
+   add ebx, cols - 1
+
+   cmp Board_Layout[ebx], al
+   jne Lower_Left_End
+   inc edx
+
+   loop Lower_Left
+   Lower_Left_End:
+
+   cmp edx,4
+   jae Label_Win
+   
+   mov edx,1
+   mov edi, COLUMN
+   mov esi, ROW
+   mov ebx, INDEX
+
+   mov ecx,3
+
+
+   Upper_Left:
+   dec edi
+   cmp edi,0
+   jb Upper_Left_End
+   dec esi
+   cmp esi,0
+   jb Upper_Left_End
+
+   add ebx, (-cols-1)
+
+   cmp Board_Layout[ebx],al
+   jne Upper_Left_End
+   inc edx
+
+   loop Upper_Left
+   Upper_Left_End:
+
+
+   mov edi, COLUMN
+   mov esi, ROW
+   mov ebx, INDEX
+
+   mov ecx,3
+
+   Lower_Right:
+   inc edi
+   cmp edi,cols
+   jae Lower_Right_End
+   inc esi
+   cmp esi, rows
+   jae Lower_Right_End
+
+   add ebx, (cols+1)
+
+   cmp Board_Layout[ebx],al
+   jne Lower_Right_End
+   inc edx
+
+   loop Lower_Right
+   Lower_Right_End:
+
+   cmp edx,4
+   jb _End
+
+Label_Win:
+call Winner
+
+_End:
+
+ret
 Check_Diagonal ENDP
 
 Check_Vertical PROC ROW:DWORD, INDEX:DWORD
@@ -114,6 +226,7 @@ L1:
 call Winner
 
 _End:
+
 ret
 Check_Vertical ENDP
 
@@ -205,7 +318,7 @@ INVOKE Check_Horizontal, COLUMN, INDEX
 
 INVOKE Check_Vertical, ROW, INDEX
 
-;INVOKE Check_Diagonal, COLUMN,ROW,INDEX
+INVOKE Check_Diagonal, COLUMN,ROW,INDEX
 
 jmp _End
 
@@ -213,9 +326,12 @@ jmp _End
 Draw:
 
 
+
+
 _End:
 
 ret
 Checker ENDP
 END
+	
 
