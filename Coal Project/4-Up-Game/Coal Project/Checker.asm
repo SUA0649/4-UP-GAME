@@ -44,7 +44,7 @@ jc Player_1
 Player_2:
 
 mov esi, 0
-mov eax, 14 
+mov eax, 4 
 call SetTextColor
 L1:
 
@@ -62,7 +62,7 @@ Player_1:
 
 mov esi,0
 
-mov eax, 4
+mov eax, 1
 call SetTextColor
 
 L2:
