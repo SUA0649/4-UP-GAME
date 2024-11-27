@@ -199,6 +199,7 @@ Main_Menu:
 		cmp Current_Option,1
 		je How_To_Play
 		cmp Current_Option,2
+		mov eax,-2
 		ret
 
 	How_To_Play:
@@ -275,6 +276,7 @@ Main_Menu:
 
 _board:
 	call board
+	mov eax,-1
 	ret
 
 

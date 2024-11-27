@@ -30,9 +30,6 @@ EXTERN Current_Iteration:DWORD
 
 .code
 
-
-
-
 Winner PROC
 
 mov eax, Current_Iteration
@@ -78,26 +75,29 @@ mov eax,15
 call SetTextColor
 
 _End:
-
+	
 call ReadDec
-	mov eax,-1
+mov eax,-1
 ret
 Winner ENDP
 
 
 
 
-;Check_Diagonal PROC COLUMN:DWORD,ROW:DWORD,INDEX:DWORD
+Check_Diagonal PROC uses ebx, COLUMN:DWORD, ROW:DWORD, INDEX:DWORD
+    mov edx,1 ; counter
+	mov edi,ROW
+	cmp Current_Iteration,10
+	jl _End
 
-
-
-;Check_Diagonal ENDP
-
+    _End:
+        ret
+Check_Diagonal ENDP
 
 Check_Vertical PROC ROW:DWORD, INDEX:DWORD
 
 mov edi,ROW
-
+    
 cmp edi,3
 jg _End
 
@@ -106,7 +106,6 @@ mov ecx,3
 mov esi, INDEX
 
 L1:
-
 	add esi, rows+1
 	cmp Board_Layout[esi],al	
 	jne _End
@@ -122,8 +121,8 @@ Check_Vertical ENDP
 Check_Horizontal PROC COLUMN:DWORD, INDEX:DWORD
 
 
-mov edx,1
-mov esi,COLUMN
+mov edx,1 ; Counter for checking number
+mov esi,COLUMN ;
 mov edi,INDEX
 
 Going_Right:

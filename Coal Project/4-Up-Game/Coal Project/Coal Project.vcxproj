@@ -95,6 +95,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Irvine\Irvine;C:\windows_a\Include</AdditionalLibraryDirectories>
       <AdditionalDependencies>Irvine32.lib;kernel32.lib;user32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <StackReserveSize>1073741824</StackReserveSize>
+      <StackCommitSize>65536</StackCommitSize>
     </Link>
     <MASM>
       <IncludePaths>C:/irvine/irvine</IncludePaths>
@@ -116,6 +118,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Irvine\Irvine;C:\windows_a\Include</AdditionalLibraryDirectories>
       <AdditionalDependencies>Irvine32.lib;kernel32.lib;user32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <StackReserveSize>1073741824</StackReserveSize>
+      <StackCommitSize>65536</StackCommitSize>
     </Link>
     <MASM>
       <IncludePaths>C:/irvine/irvine</IncludePaths>
@@ -133,6 +137,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>Irvine32.lib;kernel32.lib;user32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Irvine\Irvine;C:\windows_a\Include</AdditionalLibraryDirectories>
+      <StackReserveSize>1073741824</StackReserveSize>
+      <StackCommitSize>65536</StackCommitSize>
     </Link>
     <MASM>
       <IncludePaths>C:/irvine/irvine</IncludePaths>
@@ -154,6 +160,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>Irvine32.lib;kernel32.lib;user32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Irvine\Irvine;C:\windows_a\Include</AdditionalLibraryDirectories>
+      <StackReserveSize>1073741824</StackReserveSize>
+      <StackCommitSize>65536</StackCommitSize>
     </Link>
     <MASM>
       <IncludePaths>C:/irvine/irvine</IncludePaths>

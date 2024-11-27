@@ -4,3 +4,4 @@ _display PROTO
 main_game PROTO
 Checker PROTO :DWORD
 GameLoop PROTO
+Reset_Board PROTO

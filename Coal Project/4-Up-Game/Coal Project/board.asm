@@ -220,7 +220,8 @@ GameLoop PROC uses ecx edx eax ebx esi
             jmp GameLoopStart
     
     GameLoopEnd:
-    
+    call Reset_Board
+    call clrscr
 ret
 GameLoop ENDP
 
@@ -228,7 +229,6 @@ GameLoop ENDP
 
 
 DisplayBoard PROC
-
 
  ;Better to use stack to store offset than to find their offsets evertime which needs calculations from the pc
     push ebp
@@ -295,4 +295,13 @@ pop ebp
 ret 12;Emptying 8 bytes from stack
 DisplayBoard ENDP
 
+Reset_Board PROC uses esi
+    mov ecx,lengthof Board_Layout
+    mov esi,0
+       L1:
+        mov Board_Layout[esi],0
+        inc esi
+       Loop L1
+       ret
+Reset_Board ENDP
 END 
