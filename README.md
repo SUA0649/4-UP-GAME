@@ -3,7 +3,6 @@
  **Instructor: Mubashir**
 
  **Members**: Shaheer Uddin Ahmed(23K-0649),Faizan Jawed(23K-0688),Yahya Shaikh(23K-0718).  
- https://youtu.be/w4Sk5TYWdi4?si=z31NGLrWPZ8H3D-o
 
 # Main Game:
  <a href="https://youtu.be/w4Sk5TYWdi4?si=z31NGLrWPZ8H3D-o" target="_blank">
