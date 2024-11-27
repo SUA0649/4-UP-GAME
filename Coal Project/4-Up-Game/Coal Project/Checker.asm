@@ -80,7 +80,7 @@ call SetTextColor
 _End:
 
 call ReadDec
-
+	mov eax,-1
 ret
 Winner ENDP
 
@@ -115,7 +115,6 @@ L1:
 call Winner
 
 _End:
-
 ret
 Check_Vertical ENDP
 
@@ -213,8 +212,6 @@ jmp _End
 
 
 Draw:
-
-
 
 
 _End:

@@ -27,6 +27,9 @@
     <MASM Include="main_game_file.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="Checker.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
     <None Include="shared.inc">

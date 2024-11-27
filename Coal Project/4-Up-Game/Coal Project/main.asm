@@ -1,4 +1,4 @@
-Include C:/irvine/Irvine32.inc
+Include Irvine32.inc
 Include shared.inc
 
 ExitProcess PROTO, dwExitCode:DWORD
